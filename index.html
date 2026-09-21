@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Spice Garden Restaurant</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fffaf5;
+    }
+
+    header {
+      background: #8b2e1e;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+                  url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80")
+                  center/cover;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #e67e22;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #cf6d17;
+    }
+
+    section {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 35px;
+      margin-bottom: 30px;
+      color: #8b2e1e;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .food {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    }
+
+    .food h3 {
+      color: #8b2e1e;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #e67e22;
+    }
+
+    .about {
+      background: #f3e4d4;
+    }
+
+    .contact {
+      background: #8b2e1e;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    footer {
+      background: #42160f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🍽️ Spice Garden</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="home">
+    <div>
+      <h1>Welcome to Spice Garden</h1>
+
+      <p>Delicious food. Great atmosphere. Unforgettable taste.</p>
+
+      <a href="#menu" class="button">View Our Menu</a>
+    </div>
+  </section>
+
+
+  <section id="menu">
+    <h2>Our Popular Menu</h2>
+
+    <div class="menu">
+
+      <div class="food">
+        <h3>🍕 Chicken Pizza</h3>
+        <p>Freshly baked pizza with chicken and cheese.</p>
+        <div class="price">Rs. 899</div>
+      </div>
+
+      <div class="food">
+        <h3>🍔 Classic Burger</h3>
+        <p>Juicy beef burger with fresh vegetables and sauce.</p>
+        <div class="price">Rs. 499</div>
+      </div>
+
+      <div class="food">
+        <h3>🍗 Chicken Biryani</h3>
+        <p>Aromatic rice with tender chicken and special spices.</p>
+        <div class="price">Rs. 450</div>
+      </div>
+
+      <div class="food">
+        <h3>🍝 Creamy Pasta</h3>
+        <p>Delicious pasta cooked in a creamy special sauce.</p>
+        <div class="price">Rs. 650</div>
+      </div>
+
+      <div class="food">
+        <h3>🥤 Fresh Drinks</h3>
+        <p>Refreshing cold drinks and fresh juices.</p>
+        <div class="price">From Rs. 150</div>
+      </div>
+
+      <div class="food">
+        <h3>🍰 Chocolate Cake</h3>
+        <p>Rich and delicious chocolate cake.</p>
+        <div class="price">Rs. 350</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+
+    <p>
+      Spice Garden is a family-friendly restaurant serving delicious
+      food made with fresh ingredients. Come enjoy great food and
+      a welcoming atmosphere with your family and friends.
+    </p>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <h2>Visit Us</h2>
+
+    <p>📍 Main Street, Your City</p>
+    <p>📞 +92 300 1234567</p>
+    <p>🕐 Open daily: 11:00 AM – 11:00 PM</p>
+
+    <br>
+
+    <a class="button" href="tel:+923001234567">
+      Call Us
+    </a>
+  </section>
+
+
+  <footer>
+    <p>© 2026 Spice Garden Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+  </html>
